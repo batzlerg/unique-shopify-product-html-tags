@@ -1,9 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const { promisify } = require('util');
-const readdir = promisify(fs.readdir);
-const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
+import { promises as fsPromises, existsSync, mkdirSync } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const { readdir, readFile, writeFile } = fsPromises;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const main = async () => {
   try {
@@ -15,8 +17,8 @@ const main = async () => {
 
     // Create the output directory if it doesn't exist
     const outputDirectory = path.join(__dirname, 'output');
-    if (!fs.existsSync(outputDirectory)) {
-      fs.mkdirSync(outputDirectory);
+    if (!existsSync(outputDirectory)) {
+      mkdirSync(outputDirectory);
     }
 
     // Read all JSON files from the specified directory

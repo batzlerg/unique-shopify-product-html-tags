@@ -1,0 +1,20 @@
+{
+  "name": "unique-shopify-product-html-tags",
+  "version": "1.0.0",
+  "description": "parses unique html tags out of shopify product json body_html",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batzlerg/unique-shopify-product-html-tags.git"
+  },
+  "author": "batzlerg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batzlerg/unique-shopify-product-html-tags/issues"
+  },
+  "homepage": "https://github.com/batzlerg/unique-shopify-product-html-tags#readme"
+}
